@@ -50,13 +50,15 @@ So we have 16 characters with 76 choices for each char.
 
 So we have 76^16 ≈ 1.2e+30 possibilities.
 
-Known super computers or special computers can hash 156,000,000 tera-hashes/sec. ([as of year 2021](https://www.quora.com/How-long-would-it-take-the-most-powerful-supercomputers-today-that-we-know-of-to-break-a-randomly-generated-16-character-password-symbols-upper-lowercase-and-numbers-included/answer/Mark-Gritter))
+Known super computers or special computers can hash 667,000,000 tera-hashes/sec. ([as of year 2024](https://www.blockchain.com/explorer/charts/hash-rate))
 
-Dividing the two "1.2e+30 / (1.56 × 10^20)" gives us 7941323321.06 seconds, about 251 years.
+> Info: These numbers should just show the worst possible case, but to be technically correct, these hash rates just apply to the double-SHA256 algorithm, but PASS uses the PBKDF2-HMAC-SHA512 algorithm, which is even slower.
+
+Dividing the two "1.2e+30 / (6.67 × 10^20)" gives us 1799100449.78 seconds, about 57 years.
 
 But PASS is hashing your master password 2^18 time so it slows down the attacker.
 
-So "1.2e+30 / ((1.56 × 10^20) / 2^18)" gives us 2.0164923e+15 seconds, about 63942551 years.
+So "1.2e+30 / ((6.67 × 10^20) / 2^18)" gives us 4.7162339e+14 seconds, about 14,955,079 years.
 
 Even without the hashing it would be more than enough secure.
 
