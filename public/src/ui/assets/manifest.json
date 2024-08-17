@@ -1,0 +1,22 @@
+{
+    "name": "PASS",
+    "description": "PASS is a stateless password manager.",
+    "start_url": "/",
+    "display": "standalone",
+    "theme_color": "#f1f8ed",
+    "background_color": "#f1f8ed",
+    "icons": [
+        {
+            "src": "./icons/pass-maskable.png",
+            "type": "image/png",
+            "sizes": "512x512",
+            "purpose": "maskable"
+        },
+        {
+            "src": "./icons/pass.png",
+            "type": "image/png",
+            "sizes": "512x512",
+            "purpose": "any"
+        }
+    ]
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="PASS is a stateless password manager.">
+
+    <title>PASS</title>
+
+    <link rel="icon" type="image/png" href="/src/ui/assets/icons/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/src/ui/assets/css/main.css">
+</head>
+
+<body>
+    <p-centered-card>
+        <sc-header>
+            <button id="logout" class="icon round fa fa-lock-open"></button>
+        </sc-header>
+
+        <sc-main>
+            <datalist id="accounts-data-list"></datalist>
+            <input autofocus id="account" list="accounts-data-list" type="text" class="grow-m round-l"
+                placeholder="Account">
+            <button id="add-account" class="outlined round-r no-border-l fa fa-plus"></button>
+        </sc-main>
+
+        <sc-footer>
+            <button id="copy-pwd" class="outlined fa fa-clipboard round-l no-border-r"></button>
+            <x-popup>
+                <input type="checkbox" id="show-pwd" class="btn outlined icon fa fa-eye grow angular">
+                <x-popup-content id="pwd-tooltip" class="top b-125 w-300 l-m-100 c-sc rounder"></x-popup-content>
+            </x-popup>
+            <button id="open-settings" class="outlined round-r fa fa-cog no-border-l"></button>
+        </sc-footer>
+    </p-centered-card>
+
+    <script type="module">
+        import { loadController } from "/node_modules/sage-ui/js/page/controller-loader.js";
+        loadController();
+    </script>
+</body>
+
+</html>

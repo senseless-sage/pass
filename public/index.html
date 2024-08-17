@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <script>
+        navigator.serviceWorker.register("./service-worker.js", { type: "module" });
+
+        navigator.serviceWorker.ready.then(() => {
+            window.location.reload()
+        });
+    </script>
+</body>
+
+</html>

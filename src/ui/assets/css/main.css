@@ -1,0 +1,9 @@
+@layer reset, icons, settings, themes, layouts, components, utils;
+
+@import url('/node_modules/sage-ui/css/reset.css') layer(reset);
+@import url('/vendor/css/fa.min.css') layer(icons);
+@import url('/node_modules/sage-ui/css/settings.css') layer(settings);
+@import url('/node_modules/sage-ui/css/themes/green.css') layer(themes);
+@import url('/node_modules/sage-ui/css/layouts.css') layer(layouts);
+@import url('/node_modules/sage-ui/css/components/all.css') layer(components);
+@import url('/node_modules/sage-ui/css/utils/all.css') layer(utils);

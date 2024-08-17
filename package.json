@@ -1,0 +1,27 @@
+{
+    "name": "sage-pass",
+    "version": "1.0.0",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "fs": "bun run http-server -s -c-1",
+        "tsc": "tsc -p ./jsconfig.json --maxNodeModuleJsDepth 0",
+        "lint": "eslint --quiet .",
+        "lint-all": "eslint .",
+        "lint-fix": "eslint --quiet --fix .",
+        "tests": "bun test test",
+        "build": "bun run build.js"
+    },
+    "dependencies": {
+        "sage-ui": "git+https://github.com/senseless-sage/sage-ui.git"
+    },
+    "devDependencies": {
+        "http-server": "^14.1.1",
+        "@types/bun": "^1.1.6",
+        "typescript": "^5.5.3",
+        "eslint": "^9.6.0",
+        "eslint-plugin-jsdoc": "^48.6.0",
+        "globals": "^15.8.0",
+        "puppeteer": "^22.13.1"
+    }
+}

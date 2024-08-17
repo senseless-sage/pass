@@ -1,0 +1,2 @@
+- add pin for encrypting the mpwd and add a lockscreen with pin like on iphone
+- import / export config

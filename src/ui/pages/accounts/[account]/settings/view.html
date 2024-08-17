@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="PASS is a stateless password manager.">
+
+    <title>PASS</title>
+
+    <link rel="icon" type="image/png" href="/src/ui/assets/icons/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/src/ui/assets/css/main.css">
+</head>
+
+<body>
+    <p-centered-card>
+        <sc-header>
+            <button id="back" class="icon fa fa-arrow-left round"></button>
+        </sc-header>
+
+        <sc-main>
+            <input autofocus id="version" type="number" class="m-b-s" placeholder="Version">
+            <input id="length" type="number" class="m-b-s" placeholder="Length">
+            <input id="user" type="text" class="m-b-s" placeholder="User">
+            <input id="pwd" type="password" class="m-b-s" placeholder="Password">
+            <fieldset id="specialCharGroup">
+                <legend>Include special chars:</legend>
+            </fieldset>
+        </sc-main>
+
+        <sc-footer>
+            <button id="delete" class="icon fa fa-trash round"></button>
+        </sc-footer>
+    </p-centered-card>
+
+    <script type="module">
+        import { loadController } from "/node_modules/sage-ui/js/page/controller-loader.js";
+        loadController();
+    </script>
+</body>
+
+</html>
