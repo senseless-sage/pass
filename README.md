@@ -1,17 +1,16 @@
-# PASS is a stateless password manager
+### PASS is a stateless password manager.
 
-**What makes it special:**
+## What makes it special:
 - It does not save your passwords anywhere and so you dont need to sync your passwords with any server or your different devices. Because of the stateless concept your passwords are always in sync on all your devices.
 - You dont even need an internet connection, PASS runs completly offline in your browser.
 - You have complete control over your passwords from everywhere, any time.
 
-# Getting started
-
+## Getting started
 1. Enter a master password at the [login page](https://senseless-sage.github.io/pass/) and hit enter or click the login button.
 2. Enter an account name you want to get the password for and hit enter or click on the copy password button.
 3. Thats it, the password is now in your clipboard.
 
-# How it works
+## How it works
 PASS uses hashing algorithms to generate the passwords for your accounts.
 
 Simply telled these algorithms take an input and return a new value.
@@ -23,12 +22,14 @@ the same password back, no matter on which device you type it in.
 Dont be scared, yes this does mean if someone knows your master password and the account name you used then
 he can get your passwords, but i will explain [here](#security-information) why this is no problem.
 
-# Security information
+## Security information
 All your passwords are dependent from your master password, so you need to choose a strong one.
 A strong password means that you use at least one small letter, one capital letter, one number and one special character and that your password has a length of at least 16.
 
 If this is given, then you are more secure than using one of the big common password managers,
-because you have a reduced attack surface. Common password managers are saving & syncing your passwords accross the internet with all your devices and their servers. So an attacker has the option to steal your passwords by trying to hack into the network traffic. This should be almost impossible IF the password manager service provider has done everything right. The next attack surface would be to hack into the servers of the service provider and steal ALL the passwords of ALL users and try to decrypt it, IF its encrypted. This should be also almost impossible IF the service provider has done everything right. The last attack surface would be to hack into one of your devices and steal all your passwords. This should be also almost impossible IF its not a targeted attack.
+because you have a reduced attack surface.
+
+Common password managers are saving & syncing your passwords accross the internet with all your devices and their servers. So an attacker has the option to steal your passwords by trying to hack into the network traffic. This should be almost impossible IF the password manager service provider has done everything right. The next attack surface would be to hack into the servers of the service provider and steal ALL the passwords of ALL users and try to decrypt it, IF its encrypted. This should be also almost impossible IF the service provider has done everything right. The last attack surface would be to hack into one of your devices and steal all your passwords. This should be also almost impossible IF its not a targeted attack.
 
 As you see the common password managers should be very secure, but they have many IFs.
 
@@ -52,7 +53,7 @@ So we have 76^16 ≈ 1.2e+30 possibilities.
 
 Known super computers or special computers can hash 667,000,000 tera-hashes/sec. ([as of year 2024](https://www.blockchain.com/explorer/charts/hash-rate))
 
-> Info: These numbers should just show the worst possible case, but to be technically correct, these hash rates just apply to the double-SHA256 algorithm, but PASS uses the PBKDF2-HMAC-SHA512 algorithm, which is even slower.
+> Info: These numbers should just show the worst possible case, but these hash rates just apply to the double-SHA256 algorithm and PASS uses the PBKDF2-HMAC-SHA512 algorithm, which is even slower.
 
 Dividing the two "1.2e+30 / (6.67 × 10^20)" gives us 1799100449.78 seconds, about 57 years.
 
@@ -62,7 +63,14 @@ So "1.2e+30 / ((6.67 × 10^20) / 2^18)" gives us 4.7162339e+14 seconds, about 14
 
 Even without the hashing it would be more than enough secure.
 
-# Technical details
+## Additional features
+You can configure your account passwords length, version and set of allowed special characters. You can also add usernames to your accounts or set a custom password, which will be used instead of generating one.
+
+These settings are saved just on your device, so they get not synced with your other devices. But you can use the import and export function to share them.
+
+All settings are saved encrypted in your browser, so if you delete ALL your browser data, your settings will be gone.
+
+## Technical details
 I ve choosen the pbkdf2-hmac-sha512 algorithm with 2^18 iterations and no salt for generating the passwords because this algo is available in every browser, so i dont need any 3th party code.
 The iteration count is based on the OWASP recommendations and variouse other sources linked below.
 I use no salt to get the same hashes / passwords on every device given the same input.

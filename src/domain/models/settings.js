@@ -57,8 +57,8 @@ export class Settings {
         const settings = new Settings();
 
         settings.version = 1;
-        settings.length = 32;
-        settings.specialChar = SpecialCharGroup.ALL;
+        settings.length = 20;
+        settings.specialChar = SpecialCharGroup.REDUCED;
 
         return settings;
     }

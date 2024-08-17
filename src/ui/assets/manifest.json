@@ -1,7 +1,7 @@
 {
     "name": "PASS",
     "description": "PASS is a stateless password manager.",
-    "start_url": "/",
+    "start_url": "/pass/",
     "display": "standalone",
     "theme_color": "#f1f8ed",
     "background_color": "#f1f8ed",
