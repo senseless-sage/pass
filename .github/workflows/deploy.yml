@@ -40,6 +40,8 @@ jobs:
         run: bun run fs &
       - name: Run tests
         run: bun run tests
+      - name: Clean up symlink
+        run: unlink ./public/pass
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
