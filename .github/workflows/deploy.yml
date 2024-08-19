@@ -25,11 +25,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      # - uses: oven-sh/setup-bun@v2
-      # - name: Install dependencies
-      #   run: bun install
+      - uses: oven-sh/setup-bun@v2
+      - name: Install dependencies
+        run: |
+          mv package.json package.json.bak
+          grep -v sage-ui package.json.bak > package.json
+          bun install
+          mv package.json.bak package.json
       # - name: Run builder
       #   run: bun run build.js
+      - name: Run http-server
+        run: bun run fs &
+      - name: Run tests
+        run: bun run tests
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact

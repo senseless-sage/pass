@@ -13,7 +13,7 @@
 ## How it works
 PASS uses hashing algorithms to generate the passwords for your accounts.
 
-Simply telled these algorithms take an input and return a new value.
+Simply said these algorithms take an input and return a new value.
 This new value is always the same for the same given input.
 
 So if you enter the same master password and same account name into PASS you will always get
@@ -57,7 +57,7 @@ Known super computers or special computers can hash 667,000,000 tera-hashes/sec.
 
 Dividing the two "1.2e+30 / (6.67 × 10^20)" gives us 1799100449.78 seconds, about 57 years.
 
-But PASS is hashing your master password 2^18 time so it slows down the attacker.
+But PASS is hashing your master password 2^18 times so it slows down the attacker.
 
 So "1.2e+30 / ((6.67 × 10^20) / 2^18)" gives us 4.7162339e+14 seconds, about 14,955,079 years.
 
@@ -71,7 +71,7 @@ These settings are saved just on your device, so they get not synced with your o
 All settings are saved encrypted in your browser, so if you delete ALL your browser data, your settings will be gone.
 
 ## Technical details
-I ve choosen the pbkdf2-hmac-sha512 algorithm with 2^18 iterations and no salt for generating the passwords because this algo is available in every browser, so i dont need any 3th party code.
+I ve choosen the pbkdf2-hmac-sha512 algorithm with 2^18 iterations and no salt for generating the passwords because this algo is available in every browser, so i dont need any 3rd party code.
 The iteration count is based on the OWASP recommendations and variouse other sources linked below.
 I use no salt to get the same hashes / passwords on every device given the same input.
 

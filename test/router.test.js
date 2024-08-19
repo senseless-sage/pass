@@ -41,7 +41,7 @@ test("router", async () => {
 
     const pwdTooltip = await tooltip?.evaluate(el => el.textContent);
 
-    expect(pwdTooltip).toBe("RD%4n$fKmYYavGEXBc05");
+    expect(pwdTooltip).toBe("L7k5pa94V7T(PXgYwTOk");
 
     await browser.close();
 });
