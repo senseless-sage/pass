@@ -7,7 +7,7 @@ test("router", async () => {
 
     // page.on('console', msg => console.log('PAGE LOG:', msg.text()));
 
-    await page.goto("http://localhost:8080", {
+    await page.goto("http://localhost:8080/pass", {
         waitUntil: "networkidle0",
     });
 

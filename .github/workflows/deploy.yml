@@ -34,6 +34,8 @@ jobs:
           mv package.json.bak package.json
       # - name: Run builder
       #   run: bun run build.js
+      - name: Create symlink to simulate Github Pages path prefix
+        run: ln -s . ./public/pass
       - name: Run http-server
         run: bun run fs &
       - name: Run tests

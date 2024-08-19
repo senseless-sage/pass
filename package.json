@@ -9,7 +9,7 @@
         "lint": "eslint --quiet .",
         "lint-all": "eslint .",
         "lint-fix": "eslint --quiet --fix .",
-        "tests": "bun test --timeout 30000 test",
+        "tests": "bun test --timeout 15000 test",
         "build": "bun run build.js"
     },
     "dependencies": {
