@@ -1,4 +1,4 @@
-import{a as C} from"./node_modules/sage-ui/js/page/controller-loader.js";import{K as T,z as P} from"./chunk-b9ed3833cfbeb501.js";function A(x){return document.getElementById(x)}function S(x){const z=document.createElement("template");return z.innerHTML=x,z.content.firstElementChild}function d(x,z,E){if(A("toast-container")===null)document.body.append(S(`
+import{a as C} from"./node_modules/sage-ui/js/page/controller-loader.js";import{K as T,z as P} from"./chunk-32cb71365112a5da.js";function A(x){return document.getElementById(x)}function S(x){const z=document.createElement("template");return z.innerHTML=x,z.content.firstElementChild}function d(x,z,E){if(A("toast-container")===null)document.body.append(S(`
             <x-flex id="toast-container" class="v" style="position: absolute; top: 1rem; right: 1rem;"></x-flex>
         `));const Q="_"+Math.random().toString(36).substring(2,9);A("toast-container").append(S(`
         <x-toast id="toast-${Q}" class="${E}">${x}</x-toast>
