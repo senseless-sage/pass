@@ -4,7 +4,7 @@ import { buildRouterConfigProd } from "./node_modules/sage-ui/js/router/config/b
 import { listDirContentGithub } from "./node_modules/sage-ui/js/router/fileLoader.js";
 
 self.addEventListener("install", (event) => {
-    event.waitUntil(storeAndComplete(buildRouterConfigProd("pass", listDirContentGithub("senseless-sage", "pass", "public"))));
+    event.waitUntil(storeAndComplete(buildRouterConfigProd("en", listDirContentGithub("senseless-sage", "pass", "public"))));
 });
 
 self.addEventListener("fetch", fetchRequestRouting);
