@@ -42,7 +42,7 @@ export default function (loginToken) {
                 user = loadedUser;
             }).catch(() => {
                 user = userService.createUser(loginToken);
-                createBigToast("New user created!", 2000);
+                createBigToast("New master password entered!", 2000);
             }).finally(() => {
                 user.accounts = makeReactive(user.accounts, [updateAccountsDataList]);
                 updateAccountsDataList();

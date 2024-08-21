@@ -84,3 +84,4 @@ If one day the browsers natively support a memory dependent algorithm like bcyrp
 - https://www.reddit.com/r/cryptography/comments/vzaq5y/bcrypt_argon_scrypt_are_all_jokes_to_me_why_dont/
 - https://www.quora.com/How-fast-could-the-worlds-fastest-supercomputer-brute-force-crack-a-password-Could-anyone-provide-a-spreadsheet-with-how-fast-the-worlds-fastest-supercomputer-could-break-a-password-that-is-1-2-3-100+-characters-long
 - https://www.quora.com/How-long-would-it-take-the-most-powerful-supercomputers-today-that-we-know-of-to-break-a-randomly-generated-16-character-password-symbols-upper-lowercase-and-numbers-included/answer/Mark-Gritter
+- https://security.stackexchange.com/questions/259855/with-password-cracking-what-is-the-fastest-known-password-cracking-rig-in-hashe#:~:text=HashCat%20claims%20that%20their%20software,using%20the%20brute%20force%20method.
