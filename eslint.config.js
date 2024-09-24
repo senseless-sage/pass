@@ -5,7 +5,7 @@ import jsdoc from "eslint-plugin-jsdoc"
 export default [
     js.configs.recommended,
     {
-        ignores: ["eslint.config.js", "test/app/eslint.config.js"],
+        ignores: ["eslint.config.js"],
     },
     {
         languageOptions: {
