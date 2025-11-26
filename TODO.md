@@ -1,2 +1,3 @@
-- add pin for encrypting the mpwd and add a lockscreen with pin like on iphone
+- fix loading acc settings with space, fix encoding, decoding
+- add pin for encrypting the mpwd and add a lockscreen with pin like on ios
 - import / export config
